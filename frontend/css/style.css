@@ -74,3 +74,18 @@ footer {
   text-align: center;
   padding: 15px;
 }
+
+button {
+  background-color: #285943;
+  color: white;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(228, 230, 123);
+  color: #285943;
+}

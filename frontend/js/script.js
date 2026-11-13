@@ -3,10 +3,11 @@ function cadastrar() {
   var cidade = document.getElementById("cidade").value;
   var estado = document.getElementById("estado").value;
   var cultivo = document.getElementById("cultivo").value;
+  var irrigacao = document.querySelector('input[name="irrigacao"]:checked');
 
-  if (nome == "" || cidade == "" || estado == "" || cultivo == "") {
+  if (nome == "" || cidade == "" || estado == "" || cultivo == "" || irrigacao == null) {
     alert("Por favor, preencha todos os campos!");
-  } else {
+    } else {
     alert(
       "Cadastro realizado com sucesso!\n\n" +
         "Agricultor: " +
@@ -16,7 +17,9 @@ function cadastrar() {
         "\nEstado: " +
         estado +
         "\nCultivo: " +
-        cultivo,
+        cultivo +
+        "\nPrecisa ser Regado? " + 
+        irrigacao.value,
     );
   }
 }

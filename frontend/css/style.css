@@ -89,3 +89,18 @@ button:hover {
   background-color: rgb(228, 230, 123);
   color: #285943;
 }
+
+.slideshow {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.slideshow img {
+  width: 32%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}

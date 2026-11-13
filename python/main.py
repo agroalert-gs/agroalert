@@ -1,0 +1,6 @@
+print('======= Bem-vindo ao AgroAlert! ======= ')
+print('1 - Cadastrar plantação')
+print('2 - Consultar plantações')
+print('3 - Verificar umidade do solo')
+print('4 - Orientações de irrigação')
+print('5 - Sair')

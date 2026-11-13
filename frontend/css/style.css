@@ -103,4 +103,10 @@ button:hover {
   height: 220px;
   object-fit: cover;
   border-radius: 8px;
+  transition: transform 1s ease;
+}
+
+.slideshow img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }

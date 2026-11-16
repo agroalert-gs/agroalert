@@ -129,3 +129,20 @@ label {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.logo h1 {
+  margin: 5px;
+}

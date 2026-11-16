@@ -57,10 +57,37 @@ while opcao != '5':
         case '3':
             print('===== Verificação de umidade do solo =====')
             umidade = float(input('Digite a umidade do solo (%): '))
-            print('Umidade informada: ', umidade)
+            
+            while umidade < 0 or umidade > 100:
+                print('Umidade inválida! Digite um valor entre 0 e 100')
+                umidade = float(input('Digite a umidade novamente (%): '))
+                
+            if umidade < 30:
+                print('Umidade Baixa')
+            elif umidade <= 70:
+                print('Umidade Moderada') 
+            else:
+                print('Umidade alta')
+                      
             
         case '4':
-            print('Você selecionou orientações de irrigação')
+            print('===== Orientação de irrigação =====')
+            umidade_irrigacao = float(input('Digite a umidade do solo (%): '))
+            
+            while umidade_irrigacao < 0 or umidade_irrigacao > 100:
+                print('Umidade inválida!')
+                umidade_irrigacao = float(input('Digite novamente: '))
+            print('Umidade informada: ', umidade_irrigacao)
+            
+            if umidade_irrigacao < 30:
+                print('Atenção! Verifique a necessidade de irrigação')
+            elif umidade_irrigacao <= 70:
+                print('Umidade moderada. Continue monitorando o solo')
+            else:
+                print('Umidade alta. Evite irrigação desnecessária')
+            
+            
+            
         case '5':
             print('Encerrando o AgroAlert')
         case _:

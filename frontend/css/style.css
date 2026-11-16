@@ -9,11 +9,11 @@ header {
   background-color: #285943;
   color: rgb(250, 250, 250);
   text-align: center;
-  padding: 20px;
+  padding: 5px 20px;
 }
 
 header h1 {
-  margin: 5px;
+  margin: 30px;
 }
 
 nav {
@@ -123,4 +123,9 @@ body {
   to {
     opacity: 1;
   }
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

@@ -1,7 +1,13 @@
+import os
+
+# Lista responsável por armazenar os dados das plantações
 plantacoes = []
 opcao = '0'
 
+# Mantém o menu em execução até o usuário escolher sair
 while opcao != '5':
+    
+    os.system('cls')
     
     print('======= Bem-vindo ao AgroAlert! ======= ')
     print('1 - Cadastrar plantação')
@@ -35,29 +41,44 @@ while opcao != '5':
                 print('O cultivo não pode ficar vazio!')
                 cultivo = input('Digite o cultivo novamente: ')
                 
-            print('Plantação', nome, 'cadastrada com sucesso!')
-            print('Cidade:', cidade)
-            print('Estado:', estado)
-            print('Cultivo:', cultivo)
             
+            
+            # Armazena as informações da plantação cadastrada
             dados_plantacao = [nome, cidade, estado, cultivo]
             plantacoes.append(dados_plantacao)
             
+            # Limpa os campos preenchidos e exibe o resumo do cadastro
+            os.system('cls')
+            
+            print('===== Plantação cadastrada com sucesso! =====')
+            print()
+            print('Nome:', nome,)
+            print('Cidade:', cidade)
+            print('Estado:', estado)
+            print('Cultivo:', cultivo)
+            print('---------------------------------------------')
+            
+            
+            
         case '2':
             print('===== Plantações cadastradas =====')
+            
             if len(plantacoes) == 0:
                 print('Nenhuma plantação cadastrada!')
             else:
                 for plantacao in plantacoes:
+                    print()
                     print ('Nome: ', plantacao[0])
                     print ('Cidade: ', plantacao[1])
                     print ('Estado: ', plantacao[2])
                     print ('Cultivo: ', plantacao[3])
+                    print('------------------------------')
                                 
         case '3':
             print('===== Verificação de umidade do solo =====')
             umidade = float(input('Digite a umidade do solo (%): '))
             
+            # Verifica se a umidade está entre 0% e 100%
             while umidade < 0 or umidade > 100:
                 print('Umidade inválida! Digite um valor entre 0 e 100')
                 umidade = float(input('Digite a umidade novamente (%): '))
@@ -79,6 +100,7 @@ while opcao != '5':
                 umidade_irrigacao = float(input('Digite novamente: '))
             print('Umidade informada: ', umidade_irrigacao)
             
+            # Exibe orientações de irrigação conforme a umidade informada
             if umidade_irrigacao < 30:
                 print('Atenção! Verifique a necessidade de irrigação')
             elif umidade_irrigacao <= 70:
@@ -92,6 +114,10 @@ while opcao != '5':
             print('Encerrando o AgroAlert')
         case _:
             print('Opção inválida!')
+            
+    if opcao != '5':
+        input('\nPressione ENTER para voltar ao menu...')
+     
     
 
 

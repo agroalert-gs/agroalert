@@ -1,5 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Agrave+Pro:100,200,300,regular,500,600,700);
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Agrave Pro", sans-serif;
   background-color: #f2f5ed;
   color: #333;
   margin: 0;
